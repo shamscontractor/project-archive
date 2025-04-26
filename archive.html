@@ -1,39 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>بایگانی اسناد - کران دریا</title>
+    <title>انتخاب پروژه - سامانه بایگانی</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
 <div class="login-container">
-    <h1>بایگانی اسناد پروژه</h1>
-
-    <button class="btn" onclick="goBack()">بازگشت</button>
-
-    <div style="margin-top: 30px;">
-        <button class="btn" onclick="goTo('contracts.html')">قراردادها</button>
-        <button class="btn" onclick="goTo('reports.html')">گزارشات</button>
-        <button class="btn" onclick="goTo('minutes.html')">صورتجلسات</button>
-        <button class="btn" onclick="goTo('situations.html')">صورت وضعیت‌ها</button>
-        <button class="btn" onclick="goTo('scheduling.html')">زمانبندی</button>
-        <button class="btn" onclick="goTo('letters.html')">مکاتبات</button>
-    </div>
-
+    <h1>انتخاب پروژه</h1>
+    <button class="btn" onclick="goTo('projectA.html')">روسازی راه دسترسی به معادن آهن آسمالون – شهرستان مروست – استان یزد</button>
+    <button class="btn" onclick="goTo('projectB.html')">جابجایی سه پست اسکله مسافری و یک پست اسکله شیلات بندر هرمز</button>
+    <br><br>
+    <button class="btn" onclick="goBack()">بازگشت به صفحه اصلی</button>
 </div>
-
 <script>
-// تابع بازگشت به خانه
-function goBack() {
-    window.location.href = 'home.html';
-}
-
-// تابع رفتن به صفحات دسته‌بندی
-function goTo(page) {
-    window.location.href = page;
-}
+function goTo(page) { window.location.href = page; }
+function goBack() { window.location.href = 'home.html'; }
 </script>
-
 </body>
 </html>

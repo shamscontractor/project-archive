@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>جابجایی اسکله هرمز - دسته‌بندی‌ها</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="login-container">
+    <h1>جابجایی سه پست اسکله بندر هرمز</h1>
+    <button class="btn" onclick="goBack()">بازگشت به انتخاب پروژه</button>
+    <div style="margin-top: 30px;">
+        <button class="btn" onclick="goTo('contractsB.html')">قراردادها</button>
+        <button class="btn" onclick="goTo('reportsB.html')">گزارشات</button>
+        <button class="btn" onclick="goTo('minutesB.html')">صورتجلسات</button>
+        <button class="btn" onclick="goTo('situationsB.html')">صورت وضعیت‌ها</button>
+        <button class="btn" onclick="goTo('schedulingB.html')">زمانبندی</button>
+        <button class="btn" onclick="goTo('lettersB.html')">مکاتبات</button>
+    </div>
+</div>
+<script>
+function goBack() { window.location.href = 'archive.html'; }
+function goTo(page) { window.location.href = page; }
+</script>
+</body>
+</html>

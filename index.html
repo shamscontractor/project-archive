@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ورود به سامانه بایگانی کران دریا</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<div class="login-container">
+    <img src="assets/logo.png" alt="لوگو" class="logo">
+    <h1>سامانه بایگانی پروژه‌های کران دریا پیمانکاری شمس</h1>
+    <input type="password" id="passwordInput" placeholder="رمز عبور را وارد کنید">
+    <button class="btn" onclick="login()">ورود</button>
+    <p id="loginError" class="error"></p>
+</div>
+
+<script>
+// اتصال به Supabase
+const supabaseUrl = 'https://aoltsblnjgcvknpgozsn.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'; // کلید کامل قبلاً داده شده
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+// رمزها
+const adminPassword = '2487474';
+const viewerPassword = 'Karandarya';
+
+// تابع ورود
+function login() {
+    const pass = document.getElementById('passwordInput').value;
+    if (pass === adminPassword) {
+        sessionStorage.setItem('role', 'admin');
+        window.location.href = 'home.html';
+    } else if (pass === viewerPassword) {
+        sessionStorage.setItem('role', 'viewer');
+        window.location.href = 'home.html';
+    } else {
+        document.getElementById('loginError').textContent = 'رمز عبور اشتباه است.';
+    }
+}
+</script>
+
+</body>
+</html>

@@ -62,3 +62,10 @@ input[type="password"] {
     margin-top: 12px;
     font-size: 14px;
 }
+body.projectA {
+    background: linear-gradient(135deg, #2471A3, #ffffff);
+}
+
+body.projectB {
+    background: linear-gradient(135deg, #17A589, #ffffff);
+}

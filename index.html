@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سامانه بایگانی پروژه‌های کران دریا پیمانکاری شمس</title>
+
+  <!-- لینک فایل CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- لود کتابخانه Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <!-- لوگو و عنوان -->
+  <div class="header">
+    <img src="assets/logo.png" alt="لوگو" class="logo">
+    <h1>سامانه بایگانی پروژه‌های کران دریا پیمانکاری شمس</h1>
+  </div>
+
+  <!-- فرم ورود -->
+  <div class="login-container" id="loginContainer">
+    <h2>ورود به سامانه</h2>
+    <input type="password" id="passwordInput" placeholder="رمز عبور را وارد کنید">
+    <button class="btn" onclick="login()">ورود</button>
+    <p id="loginError" class="error"></p>
+  </div>
+
+  <!-- محیط اصلی برنامه -->
+  <div class="app-container hidden" id="appContainer">
+    <div class="welcome-message" id="welcomeMessage"></div>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="جستجو...">
+      <select id="sortSelect">
+        <option value="newest">جدیدترین</option>
+        <option value="alphabetical">مرتب سازی الفبایی</option>
+      </select>
+      <button id="backupButton" class="btn admin-only hidden">📦 دانلود بکاپ اطلاعات</button>
+      <button id="activityLogButton" class="btn admin-only hidden">📋 مشاهده گزارش فعالیت</button>
+    </div>
+
+    <div id="breadcrumb"></div>
+
+    <div class="folder-list" id="folderList"></div>
+    <div class="file-list" id="fileList"></div>
+
+    <div id="actions" class="admin-only hidden">
+      <input type="text" id="newFolderName" placeholder="نام دسته‌بندی جدید">
+      <button class="btn" onclick="addFolder()">➕ افزودن دسته‌بندی</button>
+
+      <input type="file" id="fileUpload">
+      <button class="btn" onclick="uploadFile()">📤 آپلود فایل</button>
+    </div>
+
+    <div class="btn-container">
+      <button class="btn" onclick="goBack()">🔙 بازگشت</button>
+    </div>
+  </div>
+
+  <!-- محیط گزارش فعالیت‌ها -->
+  <div class="app-container hidden" id="activityLogContainer">
+    <h2>گزارش فعالیت‌ها</h2>
+    <div id="activityList"></div>
+    <button class="btn" onclick="backToMain()">بازگشت به صفحه اصلی</button>
+  </div>
+
+  <!-- لود فایل اصلی جاوااسکریپت -->
+  <script src="scripts/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>خانه - سامانه بایگانی کران دریا</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h1>سامانه بایگانی پروژه‌های کران دریا پیمانکاری شمس</h1>
+
+    <button class="btn" onclick="goToArchive()">بایگانی اسناد</button>
+    <button class="btn" onclick="goToUpload()">آپلود فایل جدید</button>
+    
+    <p id="errorMessage" class="error"></p>
+</div>
+
+<script>
+// بررسی نقش کاربر
+const userRole = sessionStorage.getItem('role');
+
+if (!userRole) {
+    // اگر بدون لاگین اومده، برگرده به صفحه ورود
+    window.location.href = 'index.html';
+}
+
+// رفتن به بایگانی
+function goToArchive() {
+    window.location.href = 'archive.html';
+}
+
+// رفتن به آپلود فایل
+function goToUpload() {
+    if (userRole === 'admin') {
+        window.location.href = 'upload.html';
+    } else {
+        document.getElementById('errorMessage').textContent = '❗ فقط مدیر می‌تواند فایل آپلود کند.';
+    }
+}
+</script>
+
+</body>
+</html>

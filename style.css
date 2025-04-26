@@ -1,0 +1,60 @@
+
+body {
+    font-family: sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.login-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn, .btn-projectA, .btn-projectB {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+.btn {
+    background-color: #3498db;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-projectA {
+    background-color: #2471A3;
+}
+
+.btn-projectA:hover {
+    background-color: #1B4F72;
+}
+
+.btn-projectB {
+    background-color: #17A589;
+}
+
+.btn-projectB:hover {
+    background-color: #117864;
+}
+
+body.projectA {
+    background: linear-gradient(135deg, #2471A3, #ffffff);
+}
+
+body.projectB {
+    background: linear-gradient(135deg, #17A589, #ffffff);
+}

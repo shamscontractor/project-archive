@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
 <div class="login-container">
     <h1>انتخاب پروژه</h1>
-    <button class="btn" onclick="goTo('projectA.html')">روسازی راه دسترسی به معادن آهن آسمالون – شهرستان مروست – استان یزد</button>
-    <button class="btn" onclick="goTo('projectB.html')">جابجایی سه پست اسکله مسافری و یک پست اسکله شیلات بندر هرمز</button>
+
+    <button class="btn-projectA" onclick="goTo('projectA.html')">🛤️ روسازی راه معادن آسمالون</button>
+    <button class="btn-projectB" onclick="goTo('projectB.html')">⚓ جابجایی اسکله هرمز</button>
+
     <br><br>
     <button class="btn" onclick="goBack()">بازگشت به صفحه اصلی</button>
+
 </div>
+
 <script>
 function goTo(page) { window.location.href = page; }
 function goBack() { window.location.href = 'home.html'; }
 </script>
+
 </body>
 </html>

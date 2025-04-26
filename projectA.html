@@ -5,25 +5,24 @@
     <meta charset="UTF-8">
     <title>روسازی راه معادن آسمالون - دسته‌بندی‌ها</title>
     <link rel="stylesheet" href="styles/style.css">
-    <style>
-        body.projectA {
-            background: linear-gradient(135deg, #2471A3, #ffffff);
-        }
-    </style>
 </head>
 <body class="projectA">
 <div class="login-container">
-    <h1>روسازی راه دسترسی به معادن آهن آسمالون</h1>
+    <h1>🛤️ روسازی راه معادن آسمالون</h1>
+
     <button class="btn" onclick="goBack()">بازگشت به انتخاب پروژه</button>
+
     <div style="margin-top: 30px;">
-        <button class="btn" onclick="goTo('contractsA.html')">قراردادها</button>
-        <button class="btn" onclick="goTo('reportsA.html')">گزارشات</button>
-        <button class="btn" onclick="goTo('minutesA.html')">صورتجلسات</button>
-        <button class="btn" onclick="goTo('situationsA.html')">صورت وضعیت‌ها</button>
-        <button class="btn" onclick="goTo('schedulingA.html')">زمانبندی</button>
-        <button class="btn" onclick="goTo('lettersA.html')">مکاتبات</button>
+        <button class="btn-projectA" onclick="goTo('contractsA.html')">📜 قراردادها</button>
+        <button class="btn-projectA" onclick="goTo('reportsA.html')">📝 گزارشات</button>
+        <button class="btn-projectA" onclick="goTo('minutesA.html')">🗒️ صورتجلسات</button>
+        <button class="btn-projectA" onclick="goTo('situationsA.html')">📄 صورت وضعیت‌ها</button>
+        <button class="btn-projectA" onclick="goTo('schedulingA.html')">🕒 زمانبندی</button>
+        <button class="btn-projectA" onclick="goTo('lettersA.html')">✉️ مکاتبات</button>
     </div>
+
 </div>
+
 <script>
 function goBack() { window.location.href = 'archive.html'; }
 function goTo(page) { window.location.href = page; }

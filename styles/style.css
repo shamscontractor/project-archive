@@ -1,71 +1,89 @@
-/* بکگراند گرادینت آبی روشن */
+
 body {
-    font-family: 'Vazirmatn', sans-serif;
+    font-family: sans-serif;
+    background: #f9f9f9;
     margin: 0;
-    padding: 0;
-    height: 100vh;
-    background: linear-gradient(135deg, #d6eaf8, #ffffff);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 20px;
 }
 
-/* کارت لاگین */
 .login-container {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    width: 100%;
-    max-width: 500px; /* عریض تر شده */
+    max-width: 600px;
+    margin: auto;
     text-align: center;
 }
 
-/* عنوان */
 h1 {
-    font-size: 22px;
-    margin-bottom: 30px;
-    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-/* فیلد ورودی رمز */
-input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin: 12px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
 }
 
-/* دکمه ورود */
-.btn {
-    width: 100%;
-    padding: 12px;
-    margin-top: 12px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    font-size: 16px;
-    border-radius: 8px;
+.btn, .btn-projectA, .btn-projectB, .btn-category-contracts, .btn-category-reports, .btn-category-minutes, .btn-category-situations, .btn-category-scheduling, .btn-category-letters {
+    padding: 15px 30px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
 }
 
+.btn {
+    background-color: #3498db;
+}
 .btn:hover {
     background-color: #2980b9;
 }
-
-/* پیام خطا */
-.error {
-    color: red;
-    margin-top: 12px;
-    font-size: 14px;
+.btn-projectA {
+    background-color: #2471A3;
 }
+.btn-projectA:hover {
+    background-color: #1B4F72;
+}
+.btn-projectB {
+    background-color: #17A589;
+}
+.btn-projectB:hover {
+    background-color: #117864;
+}
+
+.btn-category-contracts {
+    background-color: #2E86C1;
+}
+.btn-category-reports {
+    background-color: #28B463;
+}
+.btn-category-minutes {
+    background-color: #AF7AC5;
+}
+.btn-category-situations {
+    background-color: #F5B041;
+}
+.btn-category-scheduling {
+    background-color: #48C9B0;
+}
+.btn-category-letters {
+    background-color: #DC7633;
+}
+
+.btn-category-contracts:hover,
+.btn-category-reports:hover,
+.btn-category-minutes:hover,
+.btn-category-situations:hover,
+.btn-category-scheduling:hover,
+.btn-category-letters:hover {
+    opacity: 0.9;
+}
+
 body.projectA {
     background: linear-gradient(135deg, #2471A3, #ffffff);
 }
-
 body.projectB {
     background: linear-gradient(135deg, #17A589, #ffffff);
 }

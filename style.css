@@ -17,44 +17,73 @@ h1 {
     margin-bottom: 20px;
 }
 
-.btn, .btn-projectA, .btn-projectB {
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn, .btn-projectA, .btn-projectB, .btn-category-contracts, .btn-category-reports, .btn-category-minutes, .btn-category-situations, .btn-category-scheduling, .btn-category-letters {
     padding: 15px 30px;
     font-size: 18px;
-    margin: 10px;
     cursor: pointer;
     border: none;
     border-radius: 8px;
     color: white;
+    width: 100%;
 }
 
 .btn {
     background-color: #3498db;
 }
-
 .btn:hover {
     background-color: #2980b9;
 }
-
 .btn-projectA {
     background-color: #2471A3;
 }
-
 .btn-projectA:hover {
     background-color: #1B4F72;
 }
-
 .btn-projectB {
     background-color: #17A589;
 }
-
 .btn-projectB:hover {
     background-color: #117864;
+}
+
+.btn-category-contracts {
+    background-color: #2E86C1;
+}
+.btn-category-reports {
+    background-color: #28B463;
+}
+.btn-category-minutes {
+    background-color: #AF7AC5;
+}
+.btn-category-situations {
+    background-color: #F5B041;
+}
+.btn-category-scheduling {
+    background-color: #48C9B0;
+}
+.btn-category-letters {
+    background-color: #DC7633;
+}
+
+.btn-category-contracts:hover,
+.btn-category-reports:hover,
+.btn-category-minutes:hover,
+.btn-category-situations:hover,
+.btn-category-scheduling:hover,
+.btn-category-letters:hover {
+    opacity: 0.9;
 }
 
 body.projectA {
     background: linear-gradient(135deg, #2471A3, #ffffff);
 }
-
 body.projectB {
     background: linear-gradient(135deg, #17A589, #ffffff);
 }

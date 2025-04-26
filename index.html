@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>ورود به سامانه بایگانی کران دریا</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -17,18 +16,13 @@
 </div>
 
 <script>
-// اتصال به Supabase
-const supabaseUrl = 'https://aoltsblnjgcvknpgozsn.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'; // کلید کامل که قبلاً داری
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
-
 // رمزهای ورود
 const adminPassword = '2487474';
 const viewerPassword = 'Karandarya';
 
 // تابع لاگین
 function login() {
-    const pass = document.getElementById('passwordInput').value;
+    const pass = document.getElementById('passwordInput').value.trim();
     if (pass === adminPassword) {
         sessionStorage.setItem('role', 'admin');
         window.location.href = 'home.html'; // هدایت به صفحه اصلی
